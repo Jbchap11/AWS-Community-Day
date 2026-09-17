@@ -1,0 +1,290 @@
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+  opacity: 0.28;
+}
+
+.orb-icy {
+  width: 450px;
+  height: 450px;
+  background: var(--icy-blue);
+  top: -50px;
+  left: -80px;
+}
+
+.orb-orange {
+  width: 500px;
+  height: 500px;
+  background: var(--aws-orange);
+  top: 150px;
+  right: -120px;
+}
+
+/* Natural Flowing Ribbon Lines */
+.curved-arrow-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.35;
+}
+
+.curved-arrow-svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ribbon-line {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: ribbonDraw 4.5s ease-in-out forwards;
+}
+
+.ribbon-line-1 {
+  animation-delay: 0.2s;
+}
+
+.ribbon-line-2 {
+  animation-delay: 0.6s;
+}
+
+@keyframes ribbonDraw {
+  0% {
+    stroke-dashoffset: 2000;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+.hero-inner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+
+/* Partnership Brand Logos */
+.hero-partnership-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-logo-badge {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-logo-badge:hover {
+  transform: translateY(-4px);
+}
+
+.aws-brand-badge {
+  border: 3px solid rgba(255, 153, 0, 0.5);
+}
+.aws-brand-badge:hover {
+  box-shadow: 0 12px 28px rgba(255, 153, 0, 0.2);
+}
+
+.igdtuw-brand-badge {
+  border: 3px solid rgba(56, 189, 248, 0.5);
+}
+.igdtuw-brand-badge:hover {
+  box-shadow: 0 12px 28px rgba(56, 189, 248, 0.2);
+}
+
+.hero-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.hero-logo-img.igdtuw-crest {
+  border-radius: 50%;
+}
+
+.logo-cross {
+  font-size: 1.8rem;
+  color: var(--text-slate-muted);
+  font-weight: 300;
+  opacity: 0.6;
+}
+
+.hero-title {
+  font-size: clamp(2.6rem, 5.2vw, 4.2rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  margin-bottom: 1.5rem;
+  max-width: 1050px;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+  color: var(--text-slate-light);
+  max-width: 860px;
+  margin-bottom: 2.25rem;
+  line-height: 1.65;
+}
+
+.logistics-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  background: rgba(30, 41, 59, 0.7);
+  border: 1px solid var(--border-slate);
+  padding: 1rem 2.25rem;
+  border-radius: var(--radius-lg);
+  margin-bottom: 2.5rem;
+}
+
+.logistics-item {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  text-align: left;
+}
+
+.text-icy {
+  color: var(--icy-blue);
+}
+
+.text-orange {
+  color: var(--aws-orange);
+}
+
+.logistics-label {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--text-slate-muted);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.logistics-val {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-snow);
+}
+
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 0.6rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero-reg-deadline-note {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ff9900;
+  margin-bottom: 3rem;
+  letter-spacing: 0.01em;
+  text-shadow: 0 0 12px rgba(255, 153, 0, 0.25);
+}
+
+.btn-lg {
+  padding: 1rem 2.25rem;
+  font-size: 1.1rem;
+}
+
+/* Small & Cute Detail Metric Boxes */
+.cute-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.cute-stat-box {
+  background: rgba(30, 41, 59, 0.75);
+  border: 1px solid var(--border-slate);
+  padding: 1.25rem 1rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cute-stat-box:hover {
+  transform: translateY(-3px) scale(1.02);
+  border-color: rgba(56, 189, 248, 0.4);
+  background: rgba(30, 41, 59, 0.95);
+  box-shadow: 0 8px 24px rgba(56, 189, 248, 0.15);
+}
+
+.cute-stat-num {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--aws-orange);
+  font-family: var(--font-mono);
+  line-height: 1.1;
+}
+
+.cute-stat-txt {
+  font-size: 0.85rem;
+  color: var(--text-snow);
+  font-weight: 600;
+  margin-top: 0.35rem;
+}
+
+@media (max-width: 1100px) {
+  .cute-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .cute-stats-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-partnership-logos {
+    gap: 1rem;
+  }
+  .hero-logo-badge {
+    width: 75px;
+    height: 75px;
+  }
+}

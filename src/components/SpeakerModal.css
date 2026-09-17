@@ -1,0 +1,173 @@
+.speaker-modal-content {
+  background: var(--bg-navy-card);
+  border: 1px solid var(--border-slate);
+  border-radius: var(--radius-xl);
+  width: 100%;
+  max-width: 580px;
+  padding: 2rem;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.speaker-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-slate);
+}
+
+.modal-speaker-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--icy-blue);
+}
+
+.modal-speaker-name {
+  font-size: 1.3rem;
+  color: var(--text-snow);
+}
+
+.modal-speaker-role {
+  font-size: 0.88rem;
+  color: var(--icy-blue);
+  font-weight: 600;
+}
+
+.modal-speaker-company {
+  font-size: 0.8rem;
+  color: var(--text-slate-muted);
+}
+
+.speaker-modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.speaker-bio-box h4, .speaker-talk-box h4 {
+  font-size: 0.9rem;
+  color: var(--text-snow);
+  margin-bottom: 0.4rem;
+}
+
+.speaker-bio-box p {
+  font-size: 0.88rem;
+  color: var(--text-slate-light);
+  line-height: 1.5;
+}
+
+.talk-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid var(--border-slate);
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-md);
+  font-size: 0.88rem;
+  color: var(--text-snow);
+  font-weight: 600;
+}
+
+.speaker-links-section h4 {
+  font-size: 0.9rem;
+  color: var(--text-snow);
+  margin-bottom: 0.6rem;
+}
+
+.modal-links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.75rem;
+}
+
+.modal-link-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid var(--border-slate);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-link-card.linkedin-card {
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+.modal-link-card.linkedin-card:hover {
+  background: rgba(10, 102, 194, 0.18);
+  border-color: #38BDF8;
+  transform: translateY(-2px);
+}
+
+.modal-link-card.portfolio-card {
+  border-color: rgba(255, 153, 0, 0.3);
+}
+
+.modal-link-card.portfolio-card:hover {
+  background: rgba(255, 153, 0, 0.18);
+  border-color: var(--aws-orange);
+  transform: translateY(-2px);
+}
+
+.modal-link-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.linkedin-card .modal-link-icon {
+  background: rgba(56, 189, 248, 0.15);
+  color: #38BDF8;
+}
+
+.portfolio-card .modal-link-icon {
+  background: rgba(255, 153, 0, 0.15);
+  color: var(--aws-orange);
+}
+
+.modal-link-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.modal-link-info strong {
+  font-size: 0.88rem;
+  color: var(--text-snow);
+}
+
+.modal-link-info span {
+  font-size: 0.75rem;
+  color: var(--text-slate-muted);
+}
+
+.link-arrow {
+  color: var(--text-slate-muted);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.modal-link-card:hover .link-arrow {
+  color: var(--text-snow);
+  transform: translateX(2px);
+}
+
+.speaker-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-slate);
+}

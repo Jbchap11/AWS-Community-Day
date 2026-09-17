@@ -1,0 +1,108 @@
+.student-experience-section {
+  background: linear-gradient(90deg, #071329 0%, #0a213a 35%, #083c42 70%, #0d5e54 100%);
+  width: 100%;
+  padding: 4.5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.student-experience-section::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  left: -80px;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.2) 0%, transparent 70%);
+  filter: blur(90px);
+  pointer-events: none;
+}
+
+.student-experience-section::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  right: -80px;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.22) 0%, transparent 70%);
+  filter: blur(90px);
+  pointer-events: none;
+}
+
+.student-experience-section .section-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.experience-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.exp-card {
+  background: rgba(30, 41, 59, 0.7);
+  border: 1px solid var(--border-slate);
+  padding: 1.85rem;
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.exp-card:hover {
+  border-color: rgba(56, 189, 248, 0.45);
+  background: rgba(30, 41, 59, 0.95);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+
+.exp-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.icon-orange {
+  background: rgba(255, 153, 0, 0.15);
+  color: var(--aws-orange);
+  border: 1px solid rgba(255, 153, 0, 0.35);
+}
+
+.icon-icy {
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--icy-blue);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+}
+
+.exp-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+  color: var(--text-snow);
+}
+
+.exp-desc {
+  font-size: 0.95rem;
+  color: var(--text-slate-light);
+  line-height: 1.6;
+}
+
+@media (max-width: 1100px) {
+  .experience-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .experience-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

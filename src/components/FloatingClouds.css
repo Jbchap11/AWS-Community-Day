@@ -1,0 +1,113 @@
+.floating-clouds-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floating-cloud-item {
+  position: absolute;
+  will-change: transform;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+
+.floating-cloud-item .cloud-svg {
+  filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.4));
+  stroke: rgba(186, 230, 253, 0.85);
+  fill: rgba(56, 189, 248, 0.22);
+}
+
+.theme-mixed .floating-cloud-item:nth-child(even) .cloud-svg {
+  filter: drop-shadow(0 0 12px rgba(255, 153, 0, 0.4));
+  stroke: rgba(254, 215, 170, 0.85);
+  fill: rgba(255, 153, 0, 0.22);
+}
+
+.theme-purple .floating-cloud-item .cloud-svg {
+  filter: drop-shadow(0 0 12px rgba(168, 85, 247, 0.4));
+  stroke: rgba(233, 213, 255, 0.85);
+  fill: rgba(168, 85, 247, 0.22);
+}
+
+.theme-purple .floating-cloud-item:nth-child(odd) .cloud-svg {
+  filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.4));
+  stroke: rgba(186, 230, 253, 0.85);
+  fill: rgba(56, 189, 248, 0.22);
+}
+
+@keyframes cloudFloatA {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(26px, -20px) scale(1.06);
+  }
+  66% {
+    transform: translate(-18px, -12px) scale(0.95);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes cloudFloatB {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(-24px, 18px) scale(0.94);
+  }
+  66% {
+    transform: translate(20px, -14px) scale(1.07);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes cloudFloatC {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  40% {
+    transform: translate(25px, 20px) scale(1.05);
+  }
+  80% {
+    transform: translate(-20px, -16px) scale(0.95);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes cloudFloatD {
+  0% {
+    transform: translate(0, 0) scale(0.97);
+  }
+  50% {
+    transform: translate(-18px, -22px) scale(1.06);
+  }
+  100% {
+    transform: translate(0, 0) scale(0.97);
+  }
+}
+
+.cloud-anim-0 {
+  animation: cloudFloatA infinite ease-in-out alternate;
+}
+
+.cloud-anim-1 {
+  animation: cloudFloatB infinite ease-in-out alternate;
+}
+
+.cloud-anim-2 {
+  animation: cloudFloatC infinite ease-in-out alternate;
+}
+
+.cloud-anim-3 {
+  animation: cloudFloatD infinite ease-in-out alternate;
+}
