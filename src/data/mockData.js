@@ -350,7 +350,7 @@ export const SPONSORS = [
     id: "aws",
     tier: "Title Sponsor",
     name: "Amazon Web Services (AWS)",
-    logo: "/aws-logo.png",
+    logo: `${import.meta.env.BASE_URL}aws-logo.png`,
     website: "https://aws.amazon.com",
     color: "orange"
   },
@@ -358,7 +358,7 @@ export const SPONSORS = [
     id: "konfhub",
     tier: "Ticketing Sponsor",
     name: "KonfHub",
-    logo: "/konfhub-logo.png",
+    logo: `${import.meta.env.BASE_URL}konfhub-logo.png`,
     website: "https://konfhub.com",
     color: "purple"
   }

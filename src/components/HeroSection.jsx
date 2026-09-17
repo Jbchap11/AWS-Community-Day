@@ -56,11 +56,11 @@ export default function HeroSection({ onExploreSessions, onOpenRegister }) {
         {/* Partnership Brand Logos (AWS Cloud Clubs x IGDTUW) */}
         <div className="hero-partnership-logos">
           <div className="hero-logo-badge aws-brand-badge">
-            <img src="/aws-cloud-club-logo.png" alt="AWS Cloud Clubs Logo" className="hero-logo-img" />
+            <img src={`${import.meta.env.BASE_URL}aws-cloud-club-logo.png`} alt="AWS Cloud Clubs Logo" className="hero-logo-img" />
           </div>
           <span className="logo-cross">×</span>
           <div className="hero-logo-badge igdtuw-brand-badge">
-            <img src="/igdtuw-logo.png" alt="IGDTUW Logo" className="hero-logo-img igdtuw-crest" />
+            <img src={`${import.meta.env.BASE_URL}igdtuw-logo.png`} alt="IGDTUW Logo" className="hero-logo-img igdtuw-crest" />
           </div>
         </div>
 

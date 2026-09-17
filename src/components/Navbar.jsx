@@ -66,7 +66,7 @@ export default function Navbar({ activeTab, setActiveTab, onOpenRegister, savedP
         {/* Brand Logo */}
         <div className="brand" onClick={() => handleNavClick('discover')}>
           <div className="brand-icon">
-            <img src="/aws-cloud-club-logo.png" alt="AWS Cloud Club Logo" className="navbar-brand-img" />
+            <img src={`${import.meta.env.BASE_URL}aws-cloud-club-logo.png`} alt="AWS Cloud Club Logo" className="navbar-brand-img" />
           </div>
           <div className="brand-text">
             <span className="brand-title">AWS Cloud Club</span>
