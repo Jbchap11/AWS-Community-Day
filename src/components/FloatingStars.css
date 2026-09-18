@@ -1,0 +1,131 @@
+.floating-stars-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floating-star-item {
+  position: absolute;
+  will-change: transform, opacity;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.4s ease;
+}
+
+/* Star Color Glow Styles */
+.star-color-gold .star-svg {
+  color: #ff9900;
+  filter: drop-shadow(0 0 8px rgba(255, 153, 0, 0.75)) drop-shadow(0 0 16px rgba(255, 153, 0, 0.35));
+  opacity: 0.65;
+}
+
+.star-color-gold .regular-star-svg {
+  stroke: #ffb84d;
+  fill: rgba(255, 153, 0, 0.35);
+}
+
+.star-color-amber .star-svg {
+  color: #fbbf24;
+  filter: drop-shadow(0 0 7px rgba(251, 191, 36, 0.7)) drop-shadow(0 0 14px rgba(251, 191, 36, 0.3));
+  opacity: 0.6;
+}
+
+.star-color-amber .regular-star-svg {
+  stroke: #fde68a;
+  fill: rgba(251, 191, 36, 0.3);
+}
+
+.star-color-cyan .star-svg {
+  color: #38bdf8;
+  filter: drop-shadow(0 0 9px rgba(56, 189, 248, 0.75)) drop-shadow(0 0 18px rgba(56, 189, 248, 0.35));
+  opacity: 0.65;
+}
+
+.star-color-cyan .regular-star-svg {
+  stroke: #bae6fd;
+  fill: rgba(56, 189, 248, 0.3);
+}
+
+.star-color-purple .star-svg {
+  color: #c084fc;
+  filter: drop-shadow(0 0 8px rgba(192, 132, 252, 0.7)) drop-shadow(0 0 15px rgba(192, 132, 252, 0.3));
+  opacity: 0.55;
+}
+
+.star-color-purple .regular-star-svg {
+  stroke: #e9d5ff;
+  fill: rgba(192, 132, 252, 0.3);
+}
+
+/* Float Animations matching the smooth drifting of planes & clouds */
+@keyframes starFloatDrift1 {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(0.92);
+    opacity: 0.4;
+  }
+  35% {
+    transform: translate(22px, -20px) rotate(35deg) scale(1.15);
+    opacity: 0.85;
+  }
+  70% {
+    transform: translate(-16px, -10px) rotate(70deg) scale(0.96);
+    opacity: 0.55;
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(0.92);
+    opacity: 0.4;
+  }
+}
+
+@keyframes starFloatDrift2 {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1.05);
+    opacity: 0.5;
+  }
+  30% {
+    transform: translate(-24px, 18px) rotate(-30deg) scale(0.88);
+    opacity: 0.8;
+  }
+  65% {
+    transform: translate(18px, -14px) rotate(15deg) scale(1.18);
+    opacity: 0.95;
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(1.05);
+    opacity: 0.5;
+  }
+}
+
+@keyframes starFloatDrift3 {
+  0% {
+    transform: translate(0, 0) scale(0.9);
+    opacity: 0.35;
+  }
+  40% {
+    transform: translate(20px, 18px) scale(1.12);
+    opacity: 0.85;
+  }
+  75% {
+    transform: translate(-18px, -15px) scale(0.95);
+    opacity: 0.45;
+  }
+  100% {
+    transform: translate(0, 0) scale(0.9);
+    opacity: 0.35;
+  }
+}
+
+.star-anim-1 {
+  animation: starFloatDrift1 infinite ease-in-out;
+}
+
+.star-anim-2 {
+  animation: starFloatDrift2 infinite ease-in-out;
+}
+
+.star-anim-3 {
+  animation: starFloatDrift3 infinite ease-in-out;
+}

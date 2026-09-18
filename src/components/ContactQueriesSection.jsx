@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Copy, Check, MessageSquare, Send } from 'lucide-react';
-import FloatingClouds from './FloatingClouds';
+import FloatingStars from './FloatingStars';
 import './ContactQueriesSection.css';
 
 export default function ContactQueriesSection() {
@@ -20,7 +20,7 @@ export default function ContactQueriesSection() {
 
   return (
     <section className="contact-queries-section" id="contact-queries">
-      <FloatingClouds count={12} theme="mixed" />
+      <FloatingStars count={16} />
       <div className="section-inner">
         <div className="contact-card glass-card">
           <div className="contact-card-glow"></div>
