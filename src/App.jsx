@@ -12,7 +12,6 @@ import SponsorsSection from './components/SponsorsSection';
 import FaqSection from './components/FaqSection';
 import ContactQueriesSection from './components/ContactQueriesSection';
 import Footer from './components/Footer';
-import CurvedDivider from './components/CurvedDivider';
 
 import RegistrationModal from './components/RegistrationModal';
 import SessionModal from './components/SessionModal';
@@ -89,7 +88,12 @@ export default function App() {
         {activeTab === 'discover' && (
           <>
             <HeroSection
-              onExploreSessions={() => setActiveTab('sessions')}
+              onExploreSessions={() => {
+                const el = document.getElementById('explore-sessions');
+                if (el) {
+                  el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+              }}
               onOpenRegister={() => setIsRegisterOpen(true)}
             />
 
@@ -120,41 +124,10 @@ export default function App() {
             <ContactQueriesSection />
           </>
         )}
-
-
-        {activeTab === 'sessions' && (
-          <SessionsView
-            selectedTrack={selectedTrack}
-            setSelectedTrack={setSelectedTrack}
-            bookmarkedSessionIds={bookmarkedSessionIds}
-            onToggleBookmark={toggleBookmark}
-            onOpenSessionModal={(session) => setActiveSessionModal(session)}
-          />
-        )}
-
-        {activeTab === 'speakers' && (
-          <SpeakersView onSelectSpeaker={(speaker) => setActiveSpeakerModal(speaker)} />
-        )}
-
-        {activeTab === 'prep' && (
-          <>
-            <VenueDetailsSection />
-            <CurvedDivider type="curve" glowColor="cyan" fillColor="#080e1c" />
-            <PreEventChecklistSection />
-          </>
-        )}
-
-        {activeTab === 'faq' && (
-          <>
-            <FaqSection />
-            <ContactQueriesSection />
-          </>
-        )}
       </main>
 
       {/* Footer */}
       <Footer
-        setActiveTab={setActiveTab}
         onOpenRegister={() => setIsRegisterOpen(true)}
       />
 

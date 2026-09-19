@@ -17,45 +17,42 @@ export default function Navbar({ activeTab, setActiveTab, onOpenRegister, savedP
     { id: 'faq', label: 'FAQ' },
   ];
 
+  const scrollToSection = (id, tabId) => {
+    setActiveSection(tabId);
+    setActiveTab('discover');
+    setMobileMenuOpen(false);
+    setTimeout(() => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 60);
+  };
+
   const handleNavClick = (tabId) => {
+    if (tabId === 'sessions') {
+      scrollToSection('explore-sessions', 'sessions');
+      return;
+    }
+    if (tabId === 'speakers') {
+      scrollToSection('speakers-section', 'speakers');
+      return;
+    }
     if (tabId === 'venue') {
-      setActiveSection('venue');
-      setActiveTab('discover');
-      setMobileMenuOpen(false);
-      setTimeout(() => {
-        const el = document.getElementById('venue-details-section') || document.getElementById('venue-prep-section');
-        if (el) {
-          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }, 60);
+      scrollToSection('venue-details-section', 'venue');
       return;
     }
     if (tabId === 'prep') {
-      setActiveSection('prep');
-      setActiveTab('discover');
-      setMobileMenuOpen(false);
-      setTimeout(() => {
-        const el = document.getElementById('checklist-section');
-        if (el) {
-          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }, 60);
+      scrollToSection('checklist-section', 'prep');
       return;
     }
     if (tabId === 'faq') {
-      setActiveSection('faq');
-      setActiveTab('discover');
-      setMobileMenuOpen(false);
-      setTimeout(() => {
-        const el = document.getElementById('faq-section');
-        if (el) {
-          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }, 60);
+      scrollToSection('faq-section', 'faq');
       return;
     }
+    // 'discover' — scroll to top
     setActiveSection(null);
-    setActiveTab(tabId);
+    setActiveTab('discover');
     setMobileMenuOpen(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };

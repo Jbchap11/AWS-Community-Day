@@ -45,10 +45,10 @@ export default function SessionsView({
   });
 
   return (
-    <section className="sessions-page section-theme-schedule">
+    <section className="sessions-page section-theme-schedule" id="explore-sessions">
       <div className="section-inner">
         <div className="section-header">
-          <h2 className="section-title">Explore Talks & Hands-on Workshops</h2>
+          <h2 className="section-title">Explore Sessions & Hands-on Workshops</h2>
         <p className="section-subtitle">
           Browse through expert sessions, filter by your skill level, and build your personalized event schedule.
         </p>

@@ -3,7 +3,7 @@ import { Cloud, Heart } from 'lucide-react';
 import { EVENT_DETAILS } from '../data/mockData';
 import './Footer.css';
 
-export default function Footer({ setActiveTab, onOpenRegister }) {
+export default function Footer({ onOpenRegister }) {
   return (
     <footer className="site-footer">
       <div className="footer-inner">
@@ -20,27 +20,6 @@ export default function Footer({ setActiveTab, onOpenRegister }) {
           <p className="footer-desc">
             An official student initiative organized by AWS Cloud Club at Indira Gandhi Delhi Technical University for Women. Concept redesign designed for AWS UI/UX Design Challenge.
           </p>
-        </div>
-
-        <div className="footer-links-col">
-          <h4>Navigation</h4>
-          <button onClick={() => setActiveTab('discover')}>Discover</button>
-          <button onClick={() => setActiveTab('sessions')}>Sessions & Agenda</button>
-          <button onClick={() => setActiveTab('speakers')}>Speakers</button>
-          <button onClick={() => {
-            setActiveTab('discover');
-            setTimeout(() => {
-              const el = document.getElementById('venue-details-section') || document.getElementById('venue-prep-section');
-              el?.scrollIntoView({ behavior: 'smooth' });
-            }, 60);
-          }}>Venue Details</button>
-          <button onClick={() => {
-            setActiveTab('discover');
-            setTimeout(() => {
-              document.getElementById('checklist-section')?.scrollIntoView({ behavior: 'smooth' });
-            }, 60);
-          }}>Prep Checklist</button>
-          <button onClick={() => setActiveTab('faq')}>FAQ</button>
         </div>
 
         <div className="footer-links-col">
